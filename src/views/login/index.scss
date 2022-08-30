@@ -1,0 +1,27 @@
+.login {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(65, 63, 64);
+    .login-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: -220px;
+        width: 360px;
+        padding: 25px 30px;
+        background-color: #ffffff;
+        border-radius: 4px;
+        & h4 {
+            text-align: center;
+            margin: 0 0 25px 0;
+        }
+    }
+}
+.login-form-forgot {
+    float: right;
+}
+.ant-input-affix-wrapper {
+    height: 40px;
+}
