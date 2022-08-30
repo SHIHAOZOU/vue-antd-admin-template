@@ -13,6 +13,7 @@
     "ant-design-vue": "^3.2.11",
     "axios": "^0.27.2",
     "js-md5": "^0.7.3",
+    "nprogress": "^0.2.0",
     "pinia": "^2.0.18",
     "pinia-plugin-persistedstate": "^2.1.1",
     "vue": "^3.2.37",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.7.6",
+    "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^3.0.3",
     "sass": "^1.54.4",
     "stylelint-config-standard": "^27.0.0",

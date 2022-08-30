@@ -2,11 +2,14 @@ import router from "@/routers/router";
 import { GlobalStore } from "@/store/index";
 import { MenuStore } from "@/store/modules/menu";
 import { TabsStore } from "@/store/modules/tabs";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
 
 /**
  * 路由拦截
  */
 router.beforeEach((to, from, next) => {
+	NProgress.start()
 	// 判断当前路由是否需要访问权限
 	const tabsStore = TabsStore();
 
@@ -42,8 +45,12 @@ router.beforeEach((to, from, next) => {
 					redirect: to.fullPath,
 				},
 			});
+			NProgress.done()
 		}
 	}
 });
+router.afterEach(() => {
+	NProgress.done()
+})
 
 export default router;
