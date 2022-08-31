@@ -35,21 +35,20 @@
 import {
   VideoCameraOutlined,
 } from '@ant-design/icons-vue';
-import { ref,onMounted,computed } from 'vue';
+import { onMounted,computed } from 'vue';
 import { GlobalStore } from '@/store/index'
 import { MenuStore } from '@/store/modules/menu'
 import { MenuOptions } from '@/store/interface/index';
-import { useRoute } from "vue-router";
 
-const route = useRoute()
 const globalStore = GlobalStore() 
 const menuStore = MenuStore()
-const selectedKeys = ref<string[]>([route.path])
+const selectedKedys = defineProps(["selectedKeys"])
 
 onMounted( () => {
     menuStore.setMenuList()
 })
 const menuList = computed((): MenuOptions[] => menuStore.matchList);
+
 </script>
 
 <style scoped lang="scss">
