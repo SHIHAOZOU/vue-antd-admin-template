@@ -1,16 +1,34 @@
-# Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<div align="center">
+<h1>Vue Antd Admin Template</h1>
+<p align="center">
+	<a href="https://v3.vuejs.org/" target="_blank">
+		<img src="https://img.shields.io/badge/Vue.js-3.2.37-green" alt="Vue">
+	</a>
+	<a href="https://vitejs.cn/" target="_blank">
+		<img src="https://img.shields.io/badge/Vite-3.0.7-yellow" alt="Vite">
+	</a>
+	<a href="https://pinia.web3doc.top/" target="_blank">
+		<img src="https://img.shields.io/badge/Pinia-2.0.18-orange" alt="Pinia">
+	</a>
+	<a href="https://www.antdv.com/components/overview" target="_blank">
+		<img src="https://img.shields.io/badge/Ant Design Vue-3.2.11-lightgrey" alt="Ant Design Vue">
+	</a>
+	<a href="https://www.tslang.cn/" target="_blank">
+		<img src="https://img.shields.io/badge/TypeScript-latest-blue" alt="TypeScript">
+	</a>
+</p>
+</div>
 
-## Recommended IDE Setup
+## 介绍📖
+vue-antd-admin-template（uu Admin）是一个极简的后台管理系统解决方案，它基于 Vue3 和 Ant Design Vue 实现。它使用了最新的前端技术栈 Vue3 Setup语法糖 & Vite3 & Vue-Router4 & Ant Design Vue & Pinia & TypeScript 。
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+目前正在持续更新中，对于项目有不完善的地方，希望大家能多提意见。（点Star⭐🤣）
 
-## Type Support For `.vue` Imports in TS
+## 仓库地址📚
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+| 类型 | 链接（欢迎Star⭐） |
+| -------- | -------- |
+| gitee地址 | https://gitee.com/shihaozou/vue-antd-admin-template |
+| github地址 | https://github.com/SHIHAOZOU/vue-antd-admin-template |
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
-
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
