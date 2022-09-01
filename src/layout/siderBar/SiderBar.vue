@@ -7,7 +7,7 @@
 		<div class="logo">uu Admin</div>
 		<a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
 			<template v-for="item in menuList">
-				<template v-if="!item.children">
+				<template v-if="item.children?.length === 1">
 					<a-menu-item :key="item.path">
 						<template #icon>
 							<VideoCameraOutlined />
@@ -18,18 +18,6 @@
 					</a-menu-item>
 				</template>
 				<template v-else>
-					<!-- <a-sub-menu :key="item.path">
-						<template #icon>
-							<VideoCameraOutlined />
-						</template>
-						<template #title>{{ item.meta.title }}</template>
-						<a-menu-item v-for="children in item.children" :key="children.path">
-							<router-link :to="{ path: children.path }">
-								{{ children.meta.title }}
-							</router-link>
-						</a-menu-item>
-					</a-sub-menu> -->
-					<!-- <sub-menu :item="item" v-else></sub-menu> -->
 					<sub-menu :menu-info="item" :key="item.path" />
 				</template>
 			</template>
@@ -44,6 +32,7 @@ import { GlobalStore } from "@/store/index";
 import { MenuStore } from "@/store/modules/menu";
 import { MenuOptions } from "@/store/interface/index";
 import SubMenu from "./components/SubMenu.vue";
+import {RouteRecordNormalized} from 'vue-router'
 
 const globalStore = GlobalStore();
 const menuStore = MenuStore();
@@ -52,7 +41,7 @@ const selectedKedys = defineProps(["selectedKeys"]);
 onMounted(() => {
 	menuStore.setMenuList();
 });
-const menuList = computed((): MenuOptions[] => menuStore.matchList);
+const menuList = computed((): MenuOptions[] => menuStore.matchList.filter(path=>path["name"]!=="login"));
 </script>
 
 <style scoped lang="scss">

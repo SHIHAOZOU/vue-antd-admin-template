@@ -12,6 +12,9 @@ export const routes:RouteRecordRaw[] = [
         path:"/",
         redirect: '/home',
         component:Layout,
+        meta: {
+            title: '首页',
+        },
         children: [
             {
                 path: '/home',
