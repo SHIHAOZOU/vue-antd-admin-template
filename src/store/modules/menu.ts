@@ -37,6 +37,7 @@ export const MenuStore = defineStore({
             this.matchList = routerList;
             // 保存缓存路由
             this.storageRouter = routerList;
+            // test
 		}
     },
     persist: {
