@@ -34,7 +34,7 @@ export const MenuStore = defineStore({
             notFound.forEach((notFound)=>router.addRoute(notFound))
             
             // 保存菜单列表
-            this.matchList = arr;
+            this.matchList = routerList;
             // 保存缓存路由
             this.storageRouter = routerList;
 		}
