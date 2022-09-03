@@ -1,5 +1,6 @@
 
 <div align="center">
+![logo](https://uuadmin-1256657314.cos.ap-guangzhou.myqcloud.com/uadmin.png)
 <h1>Vue Antd Admin Template</h1>
 <p align="center">
 	<a href="https://v3.vuejs.org/" target="_blank">
