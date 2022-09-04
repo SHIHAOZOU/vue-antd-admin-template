@@ -4,7 +4,7 @@ import axios,{AxiosRequestConfig,AxiosError,AxiosResponse} from "axios"
 import { message } from 'ant-design-vue';
 
 // 默认请求地址
-axios.defaults.baseURL= 'http://127.0.0.1:4523/m1/1492640-0-default/api'
+axios.defaults.baseURL= 'https://mock.apifox.cn/m1/1492640-0-default/api'
 // 设置超时时间
 axios.defaults.timeout=5000
 // 跨域时允许携带凭证
