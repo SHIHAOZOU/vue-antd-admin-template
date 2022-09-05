@@ -46,3 +46,6 @@ const onEdit = (targetKey: string) => {
     remove(targetKey);
 };
 </script>
+<style lang="scss">  
+@import "@/styles/common.scss";
+</style>
