@@ -4,7 +4,10 @@
 		:trigger="null"
 		collapsible
 	>
-		<div class="logo">uu Admin</div>
+		<div class="logo">
+			<img src="@/assets/uadmin.png" />
+			<span v-if="!globalStore.isCollapsed">uu Admin</span>
+		</div>
 		<a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
 			<template v-for="item in menuList">
 				<template v-if="item.children?.length === 1">
@@ -32,7 +35,7 @@ import { GlobalStore } from "@/store/index";
 import { MenuStore } from "@/store/modules/menu";
 import { MenuOptions } from "@/store/interface/index";
 import SubMenu from "./components/SubMenu.vue";
-import {RouteRecordNormalized} from 'vue-router'
+import { RouteRecordNormalized } from "vue-router";
 
 const globalStore = GlobalStore();
 const menuStore = MenuStore();
@@ -41,16 +44,22 @@ const selectedKedys = defineProps(["selectedKeys"]);
 onMounted(() => {
 	menuStore.setMenuList();
 });
-const menuList = computed((): MenuOptions[] => menuStore.matchList.filter(path=>path["name"]!=="login"));
+const menuList = computed((): MenuOptions[] =>
+	menuStore.matchList.filter((path) => path["name"] !== "login")
+);
 </script>
 
 <style scoped lang="scss">
 .logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 64px;
-	text-align: center;
-	line-height: 64px;
 	font-size: 30px;
 	color: #fff;
-	// background-color: ;
+	img {
+		width: 45px;
+		padding: 5px;
+	}
 }
 </style>

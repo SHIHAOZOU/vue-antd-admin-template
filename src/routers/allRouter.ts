@@ -21,80 +21,53 @@ export const allRouter = [
 	{
 		path: "/form",
 		name: "form",
-		redirect: "/form1",
+		redirect: "/formbase",
 		component: () => import("@/layout/index.vue"),
 		meta: {
-			title: "表单",
+			title: "表单组件",
 		},
 		children: [
 			{
-				path: "/form1",
-				name: "form1",
-				component: () => import("@/views/form/form1.vue"),
+				path: "/formbase",
+				name: "form-base",
+				component: () => import("@/views/form/form-base/index.vue"),
 				meta: {
-					title: "form1",
+					title: "基础表单",
 				},
-				children: [
-					{
-						path: "/form1",
-						name: "form1",
-						component: () => import("@/views/form/form1.vue"),
-						meta: {
-							title: "form1",
-						},
-						children: [
-							{
-								path: "/form1",
-								name: "form1",
-								component: () => import("@/views/form/form1.vue"),
-								meta: {
-									title: "form1",
-								},
-								children: [
-									{
-										path: "/form1",
-										name: "form1",
-										component: () => import("@/views/form/form1.vue"),
-										meta: {
-											title: "form1",
-										},
-									},
-									{
-										path: "/form2",
-										name: "form2",
-										component: () => import("@/views/form/form2.vue"),
-										meta: {
-											title: "form2",
-										},
-									},
-								],
-							},
-							{
-								path: "/form2",
-								name: "form2",
-								component: () => import("@/views/form/form2.vue"),
-								meta: {
-									title: "form2",
-								},
-							},
-						],
-					},
-					{
-						path: "/form2",
-						name: "form2",
-						component: () => import("@/views/form/form2.vue"),
-						meta: {
-							title: "form2",
-						},
-					},
-				],
 			},
 			{
-				path: "/form2",
-				name: "form2",
-				component: () => import("@/views/form/form2.vue"),
+				path: "/advancedform",
+				name: "form-advanced",
+				component: () => import("@/views/form/form-advanced/index.vue"),
 				meta: {
-					title: "form2",
+					title: "高级表单",
+				},
+			},
+		],
+	},
+	{
+		path: "/table",
+		name: "table",
+		redirect: "/tablebase",
+		component: () => import("@/layout/index.vue"),
+		meta: {
+			title: "表格组件",
+		},
+		children: [
+			{
+				path: "/tablebase",
+				name: "table-base",
+				component: () => import("@/views/table/table-base/index.vue"),
+				meta: {
+					title: "基础表格",
+				},
+			},
+			{
+				path: "/advancedtable",
+				name: "table-advanced",
+				component: () => import("@/views/table/table-advanced/index.vue"),
+				meta: {
+					title: "高级表格",
 				},
 			},
 		],
