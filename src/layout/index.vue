@@ -5,11 +5,10 @@
 		<a-layout>
 			<!-- 顶部栏 -->
 			<NavBar></NavBar>
-			<TabsBar #item="{ content }">
+			<TabsBar #item="item">
 				<!-- 内容区域 -->
 				<a-layout-content class="layout-content">
 					<router-view v-slot="{ Component }">
-						{{ content }}
 						<component :is="Component" :key="$route.fullPath" />
 					</router-view>
 				</a-layout-content>
@@ -35,11 +34,16 @@ watch(
 </script>
 
 <style scoped lang="scss">
+:deep(.ant-tabs-content) {
+	max-height: 80vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
 .layout {
 	height: 100vh;
 }
 .layout-content {
-	margin: 24px 16px;
+	margin: 0 16px;
 	padding: 24px;
 	background: #fff;
 	min-height: 280px;
