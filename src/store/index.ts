@@ -1,6 +1,7 @@
 import { defineStore,createPinia } from "pinia";
 // pinia 持久化
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import { getLocalStorageParse } from "@/utils/storage";
 
 export const GlobalStore = defineStore({
     id: "GlobalStore",
@@ -10,6 +11,8 @@ export const GlobalStore = defineStore({
             token: "",
             // collapsed
             isCollapsed: false,
+            // dark theme
+            isDark: getLocalStorageParse("GlobalStore")?.isDark || false
         }
     },
     getters: {},
@@ -19,6 +22,9 @@ export const GlobalStore = defineStore({
         },
         setCollapsed(){
             this.isCollapsed = !this.isCollapsed;
+        },
+        setTheme(){
+            this.isDark = !this.isDark
         }
     },
     persist: true

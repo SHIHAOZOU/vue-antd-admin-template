@@ -45,7 +45,7 @@ watch(
 .layout-content {
 	margin: 0 16px;
 	padding: 24px;
-	background: #fff;
+	background: var(--page-bg-color);
 	min-height: 280px;
 }
 </style>

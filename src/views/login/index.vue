@@ -11,6 +11,15 @@
 			</div>
 		</div>
 		<div class="login-right">
+			<div class="login-right-btn">
+				<a-button shape="circle" @click="switchTheme()">
+					<template #icon>
+						<BulbFilled v-if="isDark == false" /><BulbOutlined
+							v-if="isDark == true"
+						/>
+					</template>
+				</a-button>
+			</div>
 			<a-form
 				:model="formState"
 				name="normal_login"
@@ -53,18 +62,29 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { reactive, computed } from "vue";
+import { reactive, computed, onBeforeMount } from "vue";
 import { message } from "ant-design-vue";
-import { UserOutlined, LockOutlined } from "@ant-design/icons-vue";
+import {
+	UserOutlined,
+	LockOutlined,
+	BulbOutlined,
+	BulbFilled,
+} from "@ant-design/icons-vue";
 import MD5 from "js-md5";
 import { FormState, LoginForm } from "@/api/interface/index";
 import { loginApi } from "@/api/loginApi/loginFormApi";
 import { GlobalStore } from "@/store/index";
 import router from "@/routers";
 import { UserStore } from "@/store/modules/user";
+import { DarkMode } from "@/utils/theme";
 
 const globalStore = GlobalStore();
 const userStore = UserStore();
+const isDark = computed(() => globalStore.isDark);
+const switchTheme = () => {
+	DarkMode(!isDark.value);
+	globalStore.setTheme();
+};
 const loginRules = reactive({
 	username: [{ required: true, message: "请输入密码！" }],
 	password: [{ required: true, message: "请输入用户名！" }],

@@ -17,7 +17,7 @@ import BreadCrumb from "@/layout/navBar/components/BreadCrumb.vue"
 
 <style scoped lang="scss">
 .navbar {
-  background: #fff;
+  background: var(--page-bg-color);
   padding:0 16px 0 16px;
   .bread-crumb{
     padding-left: 16px;

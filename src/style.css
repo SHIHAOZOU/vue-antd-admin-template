@@ -1,0 +1,8 @@
+:root {
+	--success-color:red;
+	--page-bg-color: #fff;
+	--head-bg-color: rgba(255, 255, 255, 0.7);
+	--text-color: rgba(0, 0, 0, 0.85);
+	--line-color: #e8e8e8;
+	--content-bg-color: #f0f2f5;
+}

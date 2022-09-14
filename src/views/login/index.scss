@@ -33,11 +33,14 @@
         width: 70%;
         min-height: 100vh;
         float: right;
-        background-color: rgb(255, 255, 255);
         background-image: url("../../assets/login-banner.png");
         background-repeat: no-repeat;
         background-position: -15% 427px;
-
+        .login-right-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
         .login-form {
             position: absolute;
             top: 50%;
