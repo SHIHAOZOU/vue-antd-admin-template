@@ -3,7 +3,7 @@ export const allRouter = [
 		path: "/datascreen",
 		name: "datascreen",
 		redirect: "/datascreen",
-		component: () => import("@/layout/index.vue"),
+		// component: () => import("@/layout/index.vue"),
 		meta: {
 			title: "数据大屏",
 		},

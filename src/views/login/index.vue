@@ -56,6 +56,7 @@
 						登录
 					</a-button>
 				</a-form-item>
+
 			</a-form>
 			<p class="info">© UU ADMIN beta</p>
 		</div>
@@ -90,7 +91,7 @@ const loginRules = reactive({
 	password: [{ required: true, message: "请输入用户名！" }],
 });
 const formState = reactive<FormState>({
-	username: "admin",
+	username: "user",
 	password: "123456",
 	remember: true,
 });
