@@ -8,7 +8,7 @@
 			<img src="@/assets/uadmin.png" />
 			<span v-if="!globalStore.isCollapsed">uu Admin</span>
 		</div>
-		<a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
+		<a-menu theme="dark" mode="inline">
 			<template v-for="item in menuList">
 				<template v-if="item.children?.length === 1">
 					<a-menu-item :key="item.path">

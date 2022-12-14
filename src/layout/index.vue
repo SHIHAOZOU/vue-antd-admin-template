@@ -24,6 +24,7 @@ import SiderBar from "@/layout/siderBar/SiderBar.vue";
 import NavBar from "@/layout/navBar/NavBar.vue";
 import TabsBar from "@/layout/tabsBar/TabsBar.vue";
 const route = useRoute();
+
 const selectedKeys = ref<string[]>([route.path]);
 watch(
 	() => route.path,
