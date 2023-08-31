@@ -72,4 +72,39 @@ export const allRouter = [
 			},
 		],
 	},
+	{
+		path: "/toolkit",
+		name: "toolkit",
+		redirect: "/downloadUpload",
+		component: () => import("@/layout/index.vue"),
+		meta: {
+			title: "工具集合",
+		},
+		children: [
+			{
+				path: "/downloadUpload",
+				name: "download-upload",
+				component: () => import("@/views/toolkit/downloadUpload.vue"),
+				meta: {
+					title: "下载上传",
+				},
+			},
+			{
+				path: "/bigFileUpload",
+				name: "big-file-upload",
+				component: () => import("@/views/toolkit/bigFileUpload.vue"),
+				meta: {
+					title: "大文件上传",
+				},
+			},
+			{
+				path: "/virtualList",
+				name: "virtual-list",
+				component: () => import("@/views/toolkit/virtualList.vue"),
+				meta: {
+					title: "虚拟列表",
+				},
+			}
+		],
+	},
 ];
